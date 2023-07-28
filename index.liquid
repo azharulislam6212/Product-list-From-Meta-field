@@ -1,0 +1,10 @@
+  {% assign flavor_products = product.metafields.custom.flavors.value  %}
+                            <div class="flavors-product-items">
+                                {% for flavor_product in flavor_products %}
+                                    <div class="flavors-item">
+                                        <a href="{{flavor_product.url}}">
+                                            <img src="{{flavor_product.featured_image | img_url: 'master'}}" class="flavor_product-img" alt="img">
+                                            <p class="flavor_product-title">{{flavor_product.title}}</p>
+                                        </a>
+                                    </div>
+ {% endfor %}
